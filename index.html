@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
     <!-- SWIPER CSS -->
+    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
 
     <!-- CSS -->
     <link rel="stylesheet" href="./assets/css/style.css">
@@ -623,22 +624,64 @@
             <h2 class="section_title">Portfolio</h2>
             <span class="section_subtitle">Most recent work</span>
 
-            <div class="portfolio_container container">
-                <div>
+            <div class="portfolio_container container swiper">
+                <div class="swiper-wrapper">
                     <!-- Portfolio 1 -->
-                    <div class="potfolio_content grid">
-                        <img src="" alt="" class="portfolio_img">
+                    <div class="portfolio_content grid swiper-slide">
+                        <img src="./assets/images/portfolio1.svg" alt="portfolio1" class="portfolio_img">
 
                         <div class="portfolio_data">
-                            <h3 class="portfolio_title">Modern Website</h3>
+                            <h3 class="portfolio_title">Static Web Portfolio</h3>
                             <p class="portfolio_description">Website adaptable to all device, with UI components and animated interactions.</p>
 
                             <a href="#" class="button button--flex button--small portfolio_button">
+                                Demo
+                                <i class="uil uil-arrow-right button_icon"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Portfolio 2 -->
+                    <div class="portfolio_content grid swiper-slide">
+                        <img src="./assets/images/portfolio2.svg" alt="portfolio2" class="portfolio_img">
+
+                        <div class="portfolio_data">
+                            <h3 class="portfolio_title">Backend E-commerce API</h3>
+                            <p class="portfolio_description">Website adaptable to all device, with UI components and animated interactions.</p>
+
+                            <a href="#" class="button button--flex button--small portfolio_button">
+                                Demo
+                                <i class="uil uil-arrow-right button_icon"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Portfolio 3 -->
+                    <div class="portfolio_content grid swiper-slide">
+                        <img src="./assets/images/portfolio3.svg" alt="portfolio3" class="portfolio_img">
+
+                        <div class="portfolio_data">
+                            <h3 class="portfolio_title">E-commerce Application</h3>
+                            <p class="portfolio_description">Website adaptable to all device, with UI components and animated interactions.</p>
+
+                            <a href="#" class="button button--flex button--small portfolio_button">
+                                Demo
                                 <i class="uil uil-arrow-right button_icon"></i>
                             </a>
                         </div>
                     </div>
                 </div>
+
+                <!-- Add Arrows -->
+                <div class="swiper-button-next">
+                    <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+                </div>
+                <div class="swiper-button-prev">
+                    <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+                </div>
+
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
             </div>
         </section>
 
@@ -661,7 +704,7 @@
 
 
     <!-- SWIPER JS -->
-    <script src=""></script>
+    <script src="./assets/js/swiper-bundle.min.js"></script>
 
     <!-- MAIN JS -->
     <script src="./assets/js/main.js"></script>
