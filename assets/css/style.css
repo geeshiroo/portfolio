@@ -798,7 +798,7 @@ img {
     right: -0.5rem;
 }
 
-.swiper-container-horizontal > .swiper-pagination-bullets {
+.swiper-horizontal > .swiper-pagination-bullets {
     bottom: -2.5rem;
 }
 
@@ -1276,7 +1276,7 @@ img {
         margin-top: 4.5rem;
     }
 }
-/* For larger devices */
+/* For large screen devices */
 @media screen and (min-width: 1024px) {
     .header,
     .main,
@@ -1285,7 +1285,8 @@ img {
     }
 
     .home_blob {
-        width: 600px;
+        margin-left: 6.2rem;
+        width: 465px;
     }
     .home_social {
         transform: translateX(-6rem);
