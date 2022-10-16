@@ -67,7 +67,7 @@ tabs.forEach(tab => {
         target.classList.add('qualification_active')
 
         tabs.forEach(tab => {
-            tab.classList.removw('qualification_active')
+            tab.classList.remove('qualification_active')
         });
         tab.classList.add('qualification_active')
     });
@@ -134,24 +134,24 @@ let swiperTestimonial = new Swiper(".testimonial_container", {
 
 
 /* SCROLL SECTIONS ACTIVE LINK */
-// const sections = document.querySelectorAll('section[id]')
+const sections = document.querySelectorAll('section[id]');
 
-// function scrollActive() {
-//     const scrollY = window.pageYOffset
+function scrollActive() {
+    const scrollY = window.pageYOffset
 
-//     sections.forEach(current => {
-//         const sectionHeight = current.offsetHeight
-//         const sectionTop = current.offsetTop - 50;
-//         const sectionId = current.getAttribute('id')
+    sections.forEach(current => {
+        const sectionHeight = current.offsetHeight;
+        const sectionTop = current.offsetTop - 50;
+        const sectionId = current.getAttribute('id');
 
-//         if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-//             document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
-//         } else {
-//             document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link')
-//         }
-//     })
-// }
-// window.addEventListener('scroll', scrollActive)
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+            document.querySelector('.nav_menu a[href*=' + sectionId + ']').classList.add('active-link')
+        } else {
+            document.querySelector('.nav_menu a[href*=' + sectionId + ']').classList.remove('active-link')
+        }
+    })
+}
+window.addEventListener('scroll', scrollActive)
 
 
 
