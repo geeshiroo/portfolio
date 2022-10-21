@@ -11,14 +11,20 @@
     <!-- SWIPER CSS -->
     <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
 
-    <!-- CSS -->
+    <!-- EXTERNAL CSS -->
     <link rel="stylesheet" href="./assets/css/style.css">
 
+    <!-- FAVICON -->
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png">
 
-    <title>Portfolio</title>
+    <title>| Web Portfolio</title>
 </head>
+
 <body>
     <!-- HEADER -->
+    <!-- NAVBAR MENU -->
+    <!-- @767px and below - navbar is fixed at bottom part
+        @768px and above - navbar is fixed at upper part -->
     <header class="header" id="header">
         <nav class="nav container">
             <a href="" class="nav_logo">Geward</a>
@@ -61,7 +67,7 @@
 
             <div class="nav_btns">
 
-                <!-- Change Theme Button -->
+                <!-- Change Theme Button - to toggle light/dark mode -->
                 <i class="uil uil-moon change-theme" id="theme-button"></i>
 
                 <div class="nav_toggle" id="nav-toggle">
@@ -84,13 +90,9 @@
                             <i class="uil uil-linkedin-alt"></i>
                         </a>
 
-                        <!-- <a href="https://dribbble.com/" target="_blank" class="home_social-icon">
-                            <i class="uil uil-dribbble"></i>
-                        </a>
-
-                        <a href="https://github.com/" target="_blank" class="home_social-icon">
+                        <a href="https://github.com/geeshiroo/portfolio" target="_blank" class="home_social-icon">
                             <i class="uil uil-github-alt"></i>
-                        </a> -->
+                        </a>
 
                         <a href="https://www.instagram.com/geeshiroo/" target="_blank" class="home_social-icon">
                             <i class="uil uil-instagram"></i>
@@ -110,12 +112,14 @@
                                     d="M51.5,-60.5C65.5,-49.7,74.5,-32.2,78.5,-13.3C82.5,5.7,81.4,26,71.4,39.3C61.4,52.5,42.5,58.6,25,62.2C7.5,65.8,-8.6,66.8,-25.8,63.7C-43.1,60.6,-61.5,53.4,-69.7,39.9C-77.9,26.4,-76,6.7,-69.7,-9.4C-63.5,-25.5,-52.9,-38,-40.6,-49C-28.3,-60.1,-14.1,-69.6,2.3,-72.4C18.8,-75.2,37.6,-71.2,51.5,-60.5Z"
                                     transform="translate(100 100)" />
                             </mask>
+
+                            <!-- The <g> tag is used to group svg or images together, to transform the whole group of shapes as if it is a single shape. -->
                             <g mask="url(#mask0)">
                                 <path
                                     d="M51.5,-60.5C65.5,-49.7,74.5,-32.2,78.5,-13.3C82.5,5.7,81.4,26,71.4,39.3C61.4,52.5,42.5,58.6,25,62.2C7.5,65.8,-8.6,66.8,-25.8,63.7C-43.1,60.6,-61.5,53.4,-69.7,39.9C-77.9,26.4,-76,6.7,-69.7,-9.4C-63.5,-25.5,-52.9,-38,-40.6,-49C-28.3,-60.1,-14.1,-69.6,2.3,-72.4C18.8,-75.2,37.6,-71.2,51.5,-60.5Z"
                                     transform="translate(100 100)" />
 
-                                <image class="home_blob-img" x="50" y="78" xlink:href="assets/images/profile.png"/>
+                                <image class="home_blob-img" x="33" y="-48" xlink:href="assets/images/home_profile.png" />
                             </g>
                         </svg>
                     </div>
@@ -146,12 +150,14 @@
             <span class="section_subtitle">Introduction</span>
 
             <div class="about_container container grid">
-                <img src="./assets/images/profile.png" alt="" class="about_img">
+                <img src="./assets/images/about_profile.png" alt="" class="about_img">
 
                 <div class="about_data">
-                    <p class="about_description">Web developer, with extensive knowledge and years of experience, working in web technologies and UI / UX design, delivering quality work.</p>
+                    <p class="about_description">An ISTP individual that is reserved, proactive, and has a passion for Web Development. Committed for self-growth that can contribute to the organizations, decided to take up and finished an intensive IT coding Bootcamp and obtained certification for Frontend, Backend, and Full-Stack Web Development.</p>
 
-                    <div class="about_info">
+
+                    <!-- ADD THIS DETAILS AFTER HAVING EXPERIENCES AND CREATED WORK PROJECTS -->
+                    <!-- <div class="about_info">
                         <div>
                             <span class="about_info-title">08+</span>
                             <span class="about_info-name">Years <br> experience</span>
@@ -166,12 +172,25 @@
                             <span class="about_info-title">05+</span>
                             <span class="about_info-name">Companies <br> worked</span>
                         </div>
-                    </div>
+                    </div> -->
 
                     <div class="about_buttons">
-                        <a class="button button--flex">
+                        <a class="button button--flex about_button">
                             Download CV<i class="uil uil-download-alt button_icon"></i>
                         </a>
+                    </div>
+
+                    <!-- A modal that will appear after clicking the "Download CV button" -->
+                    <div class="cv_modal">
+                        <div class="cv_modal-content">
+                            <h4 class="cv_modal-title">Data Privacy</h4>
+                            <i class="uil uil-times cv_modal-close"></i>
+                    
+                            <div class="cv_modal-para grid">
+                                <i class="uil uil-exclamation-triangle cv_modal-icon"></i>
+                                <p>Please contact author through email to download CV file.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
