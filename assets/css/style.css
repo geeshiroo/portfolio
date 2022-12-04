@@ -1012,7 +1012,8 @@ img {
 
 .btn {
     border: none;
-    background-color: var(--container-color)
+    font-size: var(--font-medium);
+    background-color: var(--container-color);
     border-radius: 8px;
     background-color: none;
     font-family: var(--big-font-size);
