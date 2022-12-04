@@ -1012,7 +1012,9 @@ img {
 
 .btn {
     border: none;
-    background-color: white;
+    background-color: var(--container-color)
+    border-radius: 8px;
+    background-color: none;
     font-family: var(--big-font-size);
     cursor: pointer;
 }
@@ -1451,5 +1453,5 @@ img {
     .contact_form {
         width: 460px;
     }
-    
+
 }
