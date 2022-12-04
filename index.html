@@ -367,7 +367,7 @@
         </section>
 
         <!-- QUALIFICATION -->
-        <section class="qualification section">
+        <section class="qualification section" id="qualifications">
             <h2 class="section_title">Qualification</h2>
             <span class="section_subtitle">My Personal Journey</span>
 
@@ -862,18 +862,18 @@
                     </div>
                 </div>
 
-                <form action="" class="contact_form grid">
+                <form name="submit-to-google-sheet" action="" class="contact_form grid">
                     <div class="contact_inputs grid">
                         <div class="contact_content">
-                            <label for="" class="contact_label">Name</label>
-                            <input type="text" class="contact_input">
+                            <label for="" class="contact_label">Full Name</label>
+                            <input type="text" name="Full Name" required class="contact_input">
                         </div>
                     </div>
 
                     <div class="contact_inputs grid">
                         <div class="contact_content">
                             <label for="" class="contact_label">Email</label>
-                            <input type="email" class="contact_input">
+                            <input type="email" name="Email" required class="contact_input">
                         </div>
                     </div>
 
@@ -884,15 +884,19 @@
 
                     <div class="contact_content">
                         <label for="" class="contact_label">Message</label>
-                        <textarea name="" id="" cols="2" rows="3" class="contact_input"></textarea>
+                        <textarea name="Message" cols="2" rows="3" class="contact_input"></textarea>
                     </div>
 
                     <div>
-                        <a href="#" class="button button--flex">
+                        <button class="btn" type="submit">
+                            <a class="button button--flex">
                             Send Message
-                            <i class="uil uil-message button_icon"></i>
-                        </a>
+                                <i class="uil uil-message button_icon"></i>
+                            </a>
+                        </button>
+                        
                     </div>
+                    <span id="message"></span>
                 </form>
             </div>
         </section>
@@ -910,7 +914,11 @@
 
                 <ul class="footer_links">
                     <li>
-                        <a href="#services" class="footer_link">Services</a>
+                        <a href="#skills" class="footer_link">Skills</a>
+                    </li>
+
+                    <li>
+                        <a href="#qualifications" class="footer_link">Qualifications</a>
                     </li>
 
                     <li>
@@ -954,15 +962,25 @@
     <script src="./assets/js/main.js"></script>
 
 
+    <!-- SCRIPT FOR CONTACT FORM SUBMITION -->
+    <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxRt_r7b0p7syGivv5aYa0v5C77InbIzh6SET98sJCT7EyeDNaS2iJ_PTszsJ1NOtg-cQ/exec'
+    const form = document.forms['submit-to-google-sheet'];
+    const message = document.getElementById("message");
 
-
-
-
-
-
-
-
-
-
+    form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            message.innerHTML = "Message sent successfully."
+            setTimeout(function() {
+                message.innerHTML = ""
+            }, 5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+    </script>
+    
 </body>
 </html>

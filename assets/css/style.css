@@ -1010,6 +1010,20 @@ img {
     padding: 0.25rem 0.5rem 0.5rem 0;
 }
 
+.btn {
+    border: none;
+    background-color: white;
+    font-family: var(--big-font-size);
+    cursor: pointer;
+}
+
+/* notification for submitting form */
+#message {
+    color: var(--first-color-alt);
+    margin-top: -15px;
+    display: block;
+}
+
 /* FOOTER */
 .footer {
     padding-top: 2rem;
