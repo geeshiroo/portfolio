@@ -852,6 +852,10 @@ img {
 .swiper-button-next::after {
     content: '';
 }
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    opacity: 70%;
+}
 
 .swiper-portfolio-icon {
     font-size: 2rem;
@@ -868,6 +872,10 @@ img {
 
 .swiper-horizontal > .swiper-pagination-bullets {
     bottom: -2.5rem;
+}
+.swiper-pagination-bullet:hover {
+    background-color: var(--first-color);
+    opacity: 80%;
 }
 
 .swiper-pagination-bullet-active {
@@ -1369,6 +1377,7 @@ img {
     }
     .project_data {
         padding-top: 0.8rem;
+        padding-bottom: 0.8rem;
     }
 
     .footer_container {
@@ -1428,7 +1437,5 @@ img {
     .contact_form {
         width: 460px;
     }
-    .contact_inputs {
-        grid-template-columns: repeat(2, 1fr);
-    }
+    
 }
